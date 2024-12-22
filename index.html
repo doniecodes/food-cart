@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Donald Zarura">
+  <meta name="description" content="This is a Product List from Frontend Mentor coded by Donald Zarura">
+
+<!-- google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+<!-- font awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Product list with cart</title>
+</head>
+<body>
+  <header class="header">
+    <i class="fas fa-shopping-cart"></i>
+    <i class="fas fa-close"></i>
+  </header>
+  <main class="container">
+    <section class="products-section">
+      <h1 class="heading">Desserts</h1>
+      <!-- products list -->
+      <div class="products">
+        <!-- products are added here -->
+      </div>
+    </section>
+
+    <!-- cart section -->
+     <section class="main-cart">
+      <!-- empty cart -->
+      <div class="empty-cart">
+        <h2>Your cart (0)</h2>
+        <img src="assets/images/illustration-empty-cart.svg" alt="" class="empty-cart-img">
+        <p class="empty-cart-text">Your added items will appear here</p>
+      </div>
+      <!-- loaded cart -->
+      <div class="loaded-cart">
+        <h2>Your cart (<span class="cart-total-number"></span>)</h2>
+        <ul class="cart-list">
+          <!-- cart items here -->
+        </ul>
+        <!-- cart grand totals -->
+        <div class="cart-total-and-checkout">
+          <div class="cart-totals">
+            <span>Order Total</span>
+            <span class="grand-price">
+              $00.00
+            </span>
+          </div>
+          <div class="carbon-neutral">
+            <img src="assets/images/icon-carbon-neutral.svg" alt="">
+            <p class="carbon-text">
+              This is a <strong>carbon neutral</strong> delivery
+            </p>
+          </div>
+          <button class="confirm-btn" onclick="confirmOrders()">
+            Confirm Order
+          </button>
+        </div>
+      </div>
+     </section>
+  </main>
+
+  <!-- order confirmed section -->
+   <div class="confirmed-main">
+    <img src="assets/images/icon-order-confirmed.svg" alt="" class="order-icon">
+    <h2 class="confirmed-heading">
+      Order Confirmed
+    </h2>
+    <p class="confirmed-text">
+      We hope you enjoy your food!
+    </p>
+    <div class="confirmed-orders">
+      <!-- orders go here -->
+
+      <!-- order totals -->
+    <div class="order-totals">
+      <span class="order-total-text">Order Total</span>
+      <span class="order-total-price"></span>
+    </div> <!-- Confirmed Orders Go Here -->
+
+    </div>
+    <!-- new order button -->
+    <button class="new-order-btn" onclick="startNewOrder()">Start New Order</button>
+   </div>
+
+   <footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://doniecodes.github.io/portfolio/" target="_blank">Donald Zarura | @doniecode</a>.
+  </div>
+   </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
